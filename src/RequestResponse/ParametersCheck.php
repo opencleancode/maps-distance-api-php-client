@@ -1,22 +1,17 @@
 <?php
 
+declare(strict_types=1);
 
 namespace GoogleMaps\MatrixApi\RequestResponse;
 
-
 class ParametersCheck
 {
-
-    /**
-     * @var array
-     */
-    private $parameters;
+    private array $parameters;
 
     public function __construct(array  $parameters)
     {
         $this->parameters = $parameters;
     }
-
 
     /**
      * Returns a parameter by name.

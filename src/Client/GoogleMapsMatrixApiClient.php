@@ -1,6 +1,5 @@
 <?php
 
-
 namespace GoogleMaps\MatrixApi\Client;
 
 use GoogleMaps\MatrixApi\RequestResponse\ApiQuery;
@@ -11,31 +10,18 @@ use GoogleMaps\MatrixApi\RequestResponse\ResponseParser\GoogleMapsMatrixApiRespo
 
 class GoogleMapsMatrixApiClient
 {
-    /**
-     * @var string
-     */
-    protected $apiKey;
+    protected string $apiKey;
 
     /**
      * @var string
      */
     protected $url = 'https://maps.googleapis.com/maps/api/distancematrix/json';
 
-
-    /**
-     * GoogleMapsMatrixApiClient constructor.
-     * @param string $apiKey
-     */
     public function __construct(string $apiKey)
     {
         $this->apiKey = $apiKey;
     }
 
-
-    /**
-     * @param DistanceMatrix $distanceMatrix
-     * @return ApiResponse
-     */
     public function request(DistanceMatrix $distanceMatrix): ApiResponse
     {
         $defaultSearchQuery = [
@@ -44,9 +30,7 @@ class GoogleMapsMatrixApiClient
         $searchQuery = array_merge($defaultSearchQuery, $distanceMatrix->createQuery());
         $apiQuery = new ApiQuery($searchQuery);
         $apiResponseParser = new GoogleMapsMatrixApiResponseParser();
-        $apiRequest = new ApiRequest($this->url, $apiQuery, $apiResponseParser);
 
-        return $apiRequest->getRequest();
+        return (new ApiRequest($this->url, $apiQuery, $apiResponseParser))->getRequest();
     }
-
 }

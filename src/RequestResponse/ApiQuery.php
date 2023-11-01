@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 namespace GoogleMaps\MatrixApi\RequestResponse;
 
@@ -7,37 +8,25 @@ use GoogleMaps\MatrixApi\RequestResponse\Exception\MissingApiKeyException;
 use GoogleMaps\MatrixApi\RequestResponse\Exception\MissingDestinationsException;
 use GoogleMaps\MatrixApi\RequestResponse\Exception\MissingOriginsException;
 
-
-
 class ApiQuery extends ParametersCheck implements ApiQueryInterface
 {
-
-    /**
-     * @var array
-     */
-    public $parameters;
+    public array $parameters;
 
     public function __construct(array $parameters)
     {
         $this->parameters = $parameters;
+
         parent::__construct($parameters);
     }
 
-    /**
-     * @return string
-     */
-    public function getQueryString()
+    public function getQueryString(): string
     {
         arsort($this->parameters);
 
         return http_build_query($this->parameters);
     }
 
-    /**
-     * @return string
-     * @throws Exception\MissingApiKeyException
-     */
-    public function getApiKey():string
+    public function getApiKey(): string
     {
         if (!$this->has('key')) {
             throw new MissingApiKeyException();
@@ -46,12 +35,7 @@ class ApiQuery extends ParametersCheck implements ApiQueryInterface
         return $this->get('key');
     }
 
-    /**
-     * @param $key
-     *
-     * @return $this
-     */
-    public function setApiKey($key): string
+    public function setApiKey(string $key): self
     {
         $this->set('key', $key);
 
@@ -67,7 +51,7 @@ class ApiQuery extends ParametersCheck implements ApiQueryInterface
         return $this->get('origins');
     }
 
-    public function setOrigins(string $origins): string
+    public function setOrigins(string $origins): self
     {
         $this->set('origins', $origins);
 
@@ -83,12 +67,10 @@ class ApiQuery extends ParametersCheck implements ApiQueryInterface
         return $this->get('destinations');
     }
 
-    public function setDestinations(string $destinations): string
+    public function setDestinations(string $destinations): self
     {
         $this->set('destinations', $destinations);
 
         return $this;
     }
-
-
 }

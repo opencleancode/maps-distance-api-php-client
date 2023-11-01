@@ -1,12 +1,11 @@
 <?php
 
-
 use GoogleMaps\MatrixApi\Client\GoogleMapsMatrixApiClient;
 use GoogleMaps\MatrixApi\Models\Result;
 use GoogleMaps\MatrixApi\Models\Unit;
 use GoogleMaps\MatrixApi\RequestResponse\DistanceMatrix;
-
 use PHPUnit\Framework\TestCase;
+
 class ClientTest extends TestCase
 {
 

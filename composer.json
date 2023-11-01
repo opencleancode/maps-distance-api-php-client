@@ -4,6 +4,7 @@
   "keywords": [
     "distance",
     "maps-api",
+    "matrix api",
     "google"
   ],
   "license": "MIT",
@@ -15,14 +16,14 @@
   ],
   "type": "library",
   "require": {
-    "php": ">=7.1",
-    "ext-curl": "^7.2",
+    "php": ">=8.1",
+    "ext-curl": "*",
     "ext-json": "*",
     "phpunit/phpunit": "6.*"
   },
   "require-dev": {
-    "php": ">=7.1",
-    "ext-curl": "^7.2",
+    "php": ">=8.1",
+    "ext-curl": "*",
     "ext-json": "*",
     "phpunit/phpunit": "6.*"
   },
