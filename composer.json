@@ -19,7 +19,7 @@
     "php": ">=8.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "phpunit/phpunit": "6.*"
+    "phpunit/phpunit": "8.*"
   },
   "require-dev": {
     "php": ">=8.0",
