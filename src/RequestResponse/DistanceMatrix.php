@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace GoogleMaps\MatrixApi\RequestResponse;
 
-
 use GoogleMaps\MatrixApi\Models\Travel;
 
 class DistanceMatrix

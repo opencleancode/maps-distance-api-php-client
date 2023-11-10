@@ -10,16 +10,14 @@ use GoogleMaps\MatrixApi\RequestResponse\ResponseParser\GoogleMapsMatrixApiRespo
 
 class GoogleMapsMatrixApiClient
 {
-    protected string $apiKey;
 
     /**
      * @var string
      */
     protected $url = 'https://maps.googleapis.com/maps/api/distancematrix/json';
 
-    public function __construct(string $apiKey)
+    public function __construct(private string $apiKey)
     {
-        $this->apiKey = $apiKey;
     }
 
     public function request(DistanceMatrix $distanceMatrix): ApiResponse

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace GoogleMaps\MatrixApi\RequestResponse\ResponseParser;
-
 
 use GoogleMaps\MatrixApi\Models\Distance;
 use GoogleMaps\MatrixApi\Models\Duration;

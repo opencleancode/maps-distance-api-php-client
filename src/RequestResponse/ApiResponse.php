@@ -35,7 +35,6 @@ class ApiResponse implements ApiResponseInterface
         return $this->parser->parseSearchInformation($this->content);
     }
 
-
     public function getQueries()
     {
         return $this->parser->parseQueries($this->content);

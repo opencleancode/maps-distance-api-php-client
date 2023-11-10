@@ -47,5 +47,4 @@ class ParametersCheck
     {
         return \array_key_exists($key, $this->parameters);
     }
-
 }

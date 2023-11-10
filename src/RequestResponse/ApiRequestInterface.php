@@ -1,8 +1,6 @@
 <?php
 
-
 namespace GoogleMaps\MatrixApi\RequestResponse;
-
 
 interface ApiRequestInterface
 {

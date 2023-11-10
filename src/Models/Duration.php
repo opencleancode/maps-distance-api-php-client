@@ -1,8 +1,6 @@
 <?php
 
-
 namespace GoogleMaps\MatrixApi\Models;
-
 
 class Duration
 {
@@ -51,6 +49,4 @@ class Duration
         $this->unitValue = $unitValue;
         return $this;
     }
-
-
 }

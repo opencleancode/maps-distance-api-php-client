@@ -1,8 +1,6 @@
 <?php
 
-
 namespace GoogleMaps\MatrixApi\Models;
-
 
 class Distance
 {
@@ -52,7 +50,4 @@ class Distance
         $this->unitValue = $unitValue;
         return $this;
     }
-
-
-
 }
