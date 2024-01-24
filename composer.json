@@ -18,8 +18,7 @@
   "require": {
     "php": ">=8.0",
     "ext-curl": "*",
-    "ext-json": "*",
-    "phpunit/phpunit": "8.5.23"
+    "ext-json": "*"
   },
   "require-dev": {
     "php": ">=8.0",
